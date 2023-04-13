@@ -674,7 +674,8 @@ input, select, textarea {
 
 		.image.left {
 			float: left;
-			padding: 0 1.5em 1em 0;
+			margin: 5px;
+			margin-right: 5%;
 			top: 0.25em;
 		}
 
