@@ -929,6 +929,34 @@ input, select, textarea {
 					background-color: rgba(255, 255, 255, 0.175);
 				}
 
+/* Bluesky circle to match other icons */
+ul.icons li a .bluesky-circle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 50%;
+  box-shadow: inset 0 0 0 1px #ffffff;
+  transition: background-color 0.2s;
+}
+
+/* Scale SVG to fit inside the circle */
+ul.icons li a .bluesky-svg {
+  width: 1.125rem;   /* half of 2.25rem */
+  height: 1.125rem;
+  fill: #ffffff;     /* white icon */
+}
+
+/* Hover/active like other icons */
+ul.icons li a:hover .bluesky-circle {
+  background-color: rgba(255, 255, 255, 0.075);
+}
+
+ul.icons li a:active .bluesky-circle {
+  background-color: rgba(255, 255, 255, 0.175);
+}
+
 /* Table */
 
 	.table-wrapper {
