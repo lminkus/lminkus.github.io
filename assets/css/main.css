@@ -598,43 +598,60 @@ input, select, textarea {
 			padding: 0;
 		}
 
-/* Icon */
+/* Icon wrapper */
+.icon {
+  display: inline-flex;           /* Flexbox for centering */
+  justify-content: center;         /* Horizontal center */
+  align-items: center;             /* Vertical center */
+  width: 2.5rem;                   /* Circle width */
+  height: 2.5rem;                  /* Circle height */
+  border-radius: 50%;              /* Makes it a circle */
+  border: 1px solid #ffffff;       /* Circle border */
+  background-color: transparent;   /* optional, set a color if needed */
+  color: #ffffff;                  /* Icon color */
+  text-decoration: none;
+  position: relative;
+  font-size: 1.25rem;              /* Icon size */
+  line-height: 1;                  /* Ensures vertical alignment */
+  transition: transform 0.3s ease; /* Optional hover effect */
+}
 
-	.icon {
-		text-decoration: none;
-		border-bottom: none;
-		position: relative;
-	}
+/* Font Awesome pseudo-elements */
+.icon:before {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1;
+  text-transform: none !important;
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 400;
+}
 
-		.icon:before {
-			-moz-osx-font-smoothing: grayscale;
-			-webkit-font-smoothing: antialiased;
-			display: inline-block;
-			font-style: normal;
-			font-variant: normal;
-			text-rendering: auto;
-			line-height: 1;
-			text-transform: none !important;
-			font-family: 'Font Awesome 5 Free';
-			font-weight: 400;
-		}
+/* Optional variations */
+.icon.solid:before {
+  font-weight: 900;
+}
 
-		.icon > .label {
-			display: none;
-		}
+.icon.brands:before {
+  font-family: 'Font Awesome 5 Brands';
+}
 
-		.icon:before {
-			line-height: inherit;
-		}
+/* Hide label inside icon if any */
+.icon > .label {
+  display: none;
+}
 
-		.icon.solid:before {
-			font-weight: 900;
-		}
+/* Hover effect */
+.icon:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
 
-		.icon.brands:before {
-			font-family: 'Font Awesome 5 Brands';
-		}
 
+		
 /* Image */
 
 	.image {
